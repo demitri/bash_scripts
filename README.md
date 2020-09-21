@@ -14,8 +14,8 @@ A repository for my personal BASH scripts and general Unix environment setup to 
 cp -R bash_scripts $HOME/.bash_scripts
 cd home_directory_files_Mac
 cat pythonstartup >> $HOME/.pythonstartup
-cat bash_profile >> .bash_profile
-cat inputrc >> .inputrc
+cat bash_profile >> $HOME/.bash_profile
+cat inputrc >> $HOME/.inputrc
 ```
 
 #### Linux
@@ -24,8 +24,8 @@ cat inputrc >> .inputrc
 cp -R bash_scripts $HOME/.bash_scripts
 cd home_directory_files_Mac
 cat pythonstartup >> $HOME/.pythonstartup
-cat bash_profile >> .bash_profile
-cat inputrc >> .inputrc
+cat bashrc >> $HOME/.bashrc
+cat inputrc >> $HOME/.inputrc
 ```
 
 #### Other Configuration Files
