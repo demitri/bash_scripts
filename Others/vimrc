@@ -1,0 +1,14 @@
+
+" use a leading double quote to comment
+
+set number
+set paste
+
+set autoindent
+set showmode
+set sm
+set ignorecase
+set tabstop=4
+syntax on
+color aiseered
+

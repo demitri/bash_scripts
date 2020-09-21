@@ -1,0 +1,40 @@
+Host *
+	ControlMaster auto
+	#ControlPath ~/.ssh/connections/ssh-%r@%h:%p
+	ControlPath ~/.ssh/connections/%C
+	ControlPersist 1m
+	TCPKeepAlive yes
+	ServerAliveInterval 60
+	ServerAliveCountMax 3
+	IdentitiesOnly yes
+	XAuthLocation /opt/X11/bin/xauth
+
+# Use "%C" instead of "%r@%h:%p" for the ControlPath.
+# This uses a hashed value based on the host, user, hostname. and port
+# instead of the literal values. This is useful when very
+# long host names exceed a length limit. This is valid
+# for OpenSSH 6.7+ (Oct 2014).
+#
+# Also, don't choose /tmp for ControlPath for security reasons!
+# Make the 'connections' directory chmod 700 -> "chmod 700 connections"
+
+# X11 forwarding:
+# -X == ForwardX11
+# -Y == ForwardX11Trusted <-- implies "-X"
+
+# To disable ControlPath for a particular host, add this:
+# ControlPath none
+
+# Example, configure to taste.
+#Host <nickname>
+#	User <username>
+#	Port 22
+#	Hostname <host or ip>
+#	IdentityFile <use only this private SSH key>
+#	IdentitiesOnly yes # do not attempt to authenticate with a password, only SSH keys
+#	LocalForward <local port> 127.0.0.1:<remote port> # automatically forward this port
+#   ForwardAgent no
+#
+#   If a gateway is needed:
+#   ProxyJump <configured gateway server> # use nickname of server previously configured
+#   LogLevel QUIET # useful to quiet chatty gateway machines

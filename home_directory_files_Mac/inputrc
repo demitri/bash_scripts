@@ -1,0 +1,31 @@
+
+
+"\033[3~": delete-char
+
+set completion-ignore-case on
+
+# "on" means to treat "-" and "_" the same in completions
+set completion-map-case off
+
+set match-hidden-files off
+#set show-all-if-ambiguous on
+set visible-stats on
+
+# To cycle through options by hitting tab,
+# turn this on and comment out 'show-all-if-ambiguous' above.
+#TAB: menu-complete
+
+# set shift-tab to cycle through options
+"\e[Z": menu-complete
+
+# From http://www.ukuug.org/events/linux2003/papers/bash_tips/
+# Incremental searching with Up and Down. Type 'ssh <up>' to get the last 'ssh' command you used
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# shift left
+"\e[1;2D": backward-kill-word
+
+# shift right
+"\e[1;2C": kill-word
+

@@ -1,0 +1,48 @@
+# see: http://blog.alienoverlord.com/?p=4
+
+import sys
+import logging
+#import rlcompleter
+#import readline
+#readline.parse_and_bind("bind ^I rl_complete")
+
+# Ref: http://jafrog.com/2013/11/23/colors-in-terminal.html
+# Ref: https://stackoverflow.com/questions/2186919/getting-correct-string-length-in-python-for-strings-with-ansi-color-codes
+
+# Escape characters:
+# \033  -> octal escape character
+# \0x1B -> ASCII hex escape character (or \x1b)
+# \e    -> shell
+
+# Control sequence introducer: esc+[  , e.g. '\x1b['
+
+# Change the interactive prompt
+# Ref: http://docs.python.org/using/cmdline.html#envvar-PYTHONSTARTUP
+# Not sure what sys.ps2 is?
+#sys.ps1 = '\x1b[32m>>> \x1b[0m'
+#sys.ps2 = '\x1b[32m... \x1b[0m'
+
+# this works too, but has the same prompt length problem:
+# sys.ps1 = '\033[32m>>> \033[0m'
+
+# 32m = green
+# 33m = yellow
+# 31m = red
+sys.ps1 = '\001\033[1;32m\002>>> \001\033[0m\002'
+sys.ps2 = '\001\033[1;32m\002... \001\033[0m\002'
+
+# equivalent to: sys.ps1 = '\x01\033[1;32m\x02>>> \x01\033[0m\x02'
+
+# Notes:
+# The readline library accepts \001 and \002 as non-printable text delimiters.
+# \001 (^A) -> start non-visible characters (hex: \x01)
+# \002 (^B) -> end non-visible characters   (hex: \x02)
+#
+# All characters between \001 and \002 are assumed to be invisible.
+# 
+# Ref: https://superuser.com/questions/301353/escape-non-printing-characters-in-a-function-for-a-bash-prompt?rq=1
+# Ref: https://unix.stackexchange.com/a/414054
+
+# Disable logging for specific modules
+#
+logging.getLogger('asyncio').setLevel(logging.WARNING)

@@ -1,0 +1,7 @@
+
+
+
+export INPUTRC=$HOME/.inputrc
+
+# This calls all my Bash customization scripts.
+source $HOME/.bash_scripts/_init.sh

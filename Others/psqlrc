@@ -1,0 +1,16 @@
+-- Reference: http://www.postgresql.org/docs/8.4/interactive/app-psql.html
+--
+-- Uses the same color control sequences as tcsh.
+
+-- %/ = name of current database
+-- %R = usually '=' (but differs by PROMPT[123]
+-- %n = database session user name
+ -- %m = host name of the database server, truncated at the first dot, or [local] 
+ -- %M = full host name or [local]
+
+\set PROMPT1 '%[%033[1;31m%]%/%R%#%[%033[0m%] '
+\set PROMPT2 '%[%033[31m%]%/%R%#%[%033[0m%] '
+
+\pset pager
+\timing
+
