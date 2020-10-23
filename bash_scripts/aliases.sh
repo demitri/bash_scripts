@@ -11,7 +11,7 @@ alias gerp="grep"
 alias top=" top -F -R -o cpu -s 5"
 alias diff='diff -r --exclude=.DS_Store '
 alias json_pretty='python -mjson.tool | pygmentize -l json'
-alias grep="grep -n"
+alias grep="grep --exclude-dir=__pycache__ -n"
 alias pythonhttpd="python -m http.server --bind 127.0.0.1 "
 alias screenhelp="echo;echo screen help;echo;echo start a new screen with name : 'screen -S <name>';echo list running screens\ \ \ \ \ \ \ \ \ : 'screen -ls'; echo attach to a running session\ \ : 'screen -x';echo attach to session name\ \ \ \ \ \ \ : 'screen -r <name>';echo detach running screen\ \ \ \ \ \ \ \ : ^a d;echo"
 alias webproxy="ssh -D 8123  -C -q -N "

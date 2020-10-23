@@ -14,7 +14,7 @@ export HISTCONTROL=ignoreboth:erasedups
 
 # grep & ack
 # also see: https://beyondgrep.com (ack)
-export GREP_OPTIONS="--exclude-dir=__pycache__"
+#export GREP_OPTIONS="--exclude-dir=__pycache__" # deprecated; place options in alias
 export ACK_COLOR_MATCH="bold underline magenta"
 
 export SRC=/usr/local/src
