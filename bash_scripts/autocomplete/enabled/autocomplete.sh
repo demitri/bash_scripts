@@ -20,7 +20,7 @@
 function _ssh_completion() {
 	#perl -ne 'print "$1 " if /^Host (.+)$/' ~/.ssh/config
 	# awk '$1 == "Host" {print $2}' ~/.ssh/config  | /usr/bin/grep -v '*'
-	egrep -o '^Host [a-zA-Z]+' $HOME/.ssh/config | awk '{ print $2 }'
+	egrep -o '^Host [a-zA-Z0-9_]+' $HOME/.ssh/config | awk '{ print $2 }'
 }
 # add alternates here such as logging in with a non-default user, e.g.  -> complete -W "$(_ssh_completion) user@host" ssh
 complete -W "$(_ssh_completion)" ssh
