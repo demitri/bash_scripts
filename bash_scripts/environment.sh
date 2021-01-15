@@ -7,6 +7,9 @@ export EDITOR=/usr/bin/vi
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
+# See: https://unix.stackexchange.com/questions/258679/why-is-ls-suddenly-wrapping-items-with-spaces-in-single-quotes
+export QUOTING_STYLE=literal
+
 # remove duplicate commands from bash history
 # Ref: https://unix.stackexchange.com/a/265649/190451
 #export HISTCONTROL=ignoredups
