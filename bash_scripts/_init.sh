@@ -23,7 +23,9 @@ source $DIR/path.sh
 source $DIR/prompt.sh
 
 # enable bash-completions
-source /usr/local/bash-completion/etc/profile.d/bash_completion.sh 
+if [ -f "/usr/local/bash-completion/etc/profile.d/bash_completion.sh" ] ; then
+    source /usr/local/bash-completion/etc/profile.d/bash_completion.sh
+fi
 
 # Other Shell Stuff
 #
