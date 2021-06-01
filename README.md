@@ -22,7 +22,7 @@ cat inputrc >> $HOME/.inputrc
 
 ```
 cp -R bash_scripts $HOME/.bash_scripts
-cd home_directory_files_Mac
+cd home_directory_files_Linux
 cat pythonstartup >> $HOME/.pythonstartup
 cat bashrc >> $HOME/.bashrc
 cat inputrc >> $HOME/.inputrc
