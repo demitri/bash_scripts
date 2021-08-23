@@ -24,6 +24,9 @@ export SRC=/usr/local/src
 
 export HOMEBREW_NO_ANALYTICS=1
 
+# Ref: https://stackoverflow.com/questions/54429210/how-do-i-prevent-conda-from-activating-the-base-environment-by-default
+export CONDA_AUTO_ACTIVATE_BASE=false
+
 # pkg-config paths
 # ----------------
 _add_local_programs_to_pkgconfig()
