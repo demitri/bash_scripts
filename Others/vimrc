@@ -12,3 +12,10 @@ set tabstop=4
 syntax on
 color aiseered
 
+" Disable GUI; prevents X11 from launching when using over SSH.
+" Could be done with "vi -X" on the command line.
+" The thing that is triggering X11 is the use of the clipboard.
+"
+" See: https://stackoverflow.com/questions/10718573/vim-x-flag-as-vimrc-entry
+"
+set clipboard=autoselect,exclude:.*
