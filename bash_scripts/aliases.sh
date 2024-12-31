@@ -16,9 +16,11 @@ alias pythonhttpd="python -m http.server --bind 127.0.0.1 "
 alias screenhelp="echo;echo screen help;echo;echo start a new screen with name : 'screen -S <name>';echo list running screens\ \ \ \ \ \ \ \ \ : 'screen -ls'; echo attach to a running session\ \ : 'screen -x';echo attach to session name\ \ \ \ \ \ \ : 'screen -r <name>';echo detach running screen\ \ \ \ \ \ \ \ : ^a d;echo"
 alias webproxy="ssh -D 8123  -C -q -N "
 
-# create shortcut for system updates on Debian-based systems (includes Ubuntu)
+# create shortcut for system updates on Debian-based (e.g. Ubuntu) and Red Hat-based (e.g. Alma, Rocky) systems
 if [ -f "/etc/debian_version" ]; then
     alias update='sudo apt-get update && sudo apt-get upgrade'
+elif [ -f "/etc/redhat-release" ]; then
+    alias update='sudo dnf upgrade -y'
 fi
 
 # alias to GNU tar if installed 
