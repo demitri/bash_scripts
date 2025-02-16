@@ -33,7 +33,7 @@ alias grep="grep --color=auto -n"
 # see also: https://stackoverflow.com/questions/981601/colorized-grep-viewing-the-entire-file-with-highlighted-matches
 # set highlight color for grep
 # see also: https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences
-export GREP_COLOR="4;37;92"
+export GREP_COLORS="4;37;92"
 
 alias chmox="chmod +x"
 alias bell="echo '\007\c'"
