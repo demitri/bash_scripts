@@ -29,3 +29,7 @@ set visible-stats on
 # shift right
 "\e[1;2C": kill-word
 
+# meta + delete (i.e. option + delete)
+"\e[3~": backward-kill-word
+"\e[1;3D": backward-kill-word
+"\e\b": backward-kill-word
