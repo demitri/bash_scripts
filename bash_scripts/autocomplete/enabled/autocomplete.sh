@@ -25,10 +25,12 @@ function _ssh_completion() {
 # add alternates here such as logging in with a non-default user, e.g.  -> complete -W "$(_ssh_completion) user@host" ssh
 complete -W "$(_ssh_completion)" ssh
 
-function _scp_completion() {
-	perl -ne 'print "$1 " if /^Host (.+)$/' ~/.ssh/config
-}
-complete -o default -W "$(_scp_completion)" scp
+# See autocomplete_scp.sh for this functionality.
+#
+#function _scp_completion() {
+#	perl -ne 'print "$1 " if /^Host (.+)$/' ~/.ssh/config
+#}
+#complete -o default -W "$(_scp_completion)" scp
 
 # ---------
 # Mercurial
