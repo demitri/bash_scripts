@@ -2,7 +2,9 @@
 " use a leading double quote to comment
 
 set number
-set paste
+
+"This is not needed on modern Vim (8.0+)
+"set paste
 
 set autoindent
 set showmode
